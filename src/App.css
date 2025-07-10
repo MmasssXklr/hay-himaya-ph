@@ -1,0 +1,332 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth; /* ✅ Smooth anchor scrolling */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a8bc94;
+  padding: 15px 20px;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.hamburger {
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #ffcc00;
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #a8bc94;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 180px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+  }
+}
+
+/* Page Content */
+.page-content {
+  padding: 60px 20px;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/*Start of shop name*/
+.hero-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#shop-name h1 {
+  margin: 0.2%;
+  padding: 0.5rem;
+  text-align: center;
+  border-color: #333;
+}
+
+.tagline {
+  margin: 2% 0.5% 2% 0.5% ;
+  padding: 1rem;
+  font-style: italic;
+  color: #333;
+  font-size: clamp(1rem, 2.5vw, 1.8rem);
+  line-height: 1.5;
+  text-align: center;
+  max-width: 90%;
+  border: 2px solid #ffd580;
+  border-radius: 1rem;
+}
+
+
+
+.price-btn{
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: #4c6444;
+  font-size: clamp(0.3rem, 3vw, 1.5rem);
+
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.price-btn:hover {
+  background-color: #35462e;
+}
+
+/*End of shop name*/
+
+/*Start of your-crocheter*/
+.crocheter-section {
+  padding: 2rem;
+  /* background: url('/your-background.jpg') no-repeat center/cover; */
+  color: #333;
+}
+
+.crocheter-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.crocheter-photo-frame {
+  border-radius: 50%;
+  border: 6px solid #a8bc94;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.crocheter-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.crocheter-bio {
+  max-width: 500px;
+  background: #fdfdfd;
+  padding: 1.5rem;
+  border-radius: 12px;
+  font-family: 'Georgia', serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.bio-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.crocheter-gallery {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.gallery-card {
+  text-align: center;
+  max-width: 160px;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #a8bc94;
+  border-radius: 6px;
+}
+
+
+/*End of your-crocheter*/
+
+
+/*Start of Shop*/
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px; /* You can adjust this height as needed */
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.order-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #4c6444;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.order-btn:hover {
+  background-color: #35462e;
+}
+
+/*End of Shop*/
+
+
+
+
+/*Start of Testimony*/
+.testimony-section {
+  background-color: #fffaf4;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.testimony-title {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  color: #4c6444;
+  margin-bottom: 2rem;
+}
+
+.stars {
+  color: gold;
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.testimony-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.bubble {
+  background-color: #ffffff;
+  border: 2px solid #ffd580;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  max-width: 300px;
+  font-style: italic;
+  position: relative;
+  font-size: 0.95rem;
+  color: #444;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.socials {
+  text-align: center;
+}
+
+.socials p {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  color: #4c6444;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffa500;
+}
+
+
+/*End of Testimony*/

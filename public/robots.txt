@@ -1,0 +1,11 @@
+# robots.txt for Crochet
+
+User-agent: *
+Allow: /
+
+# Disallow crawling of source maps and static builds
+Disallow: /static/js/*.map$
+Disallow: /static/css/*.map$
+
+# Sitemap (replace with your actual deployed domain)
+Sitemap: https://yourdomain.com/sitemap.xml
