@@ -17,6 +17,12 @@ function App() {
   useEffect(() => {
     const fetchSheetData = async () => {
       try {
+
+        console.log("SHEET_ID:", SHEET_ID);
+        console.log("API_KEY:", API_KEY);
+        console.log("APP_RANGE:", APP_RANGE);
+
+
         const response = await fetch(
           `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${APP_RANGE}?key=${API_KEY}`
         );
