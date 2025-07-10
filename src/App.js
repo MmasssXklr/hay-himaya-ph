@@ -215,16 +215,17 @@ function App() {
                 <p>
                   <strong>₱{item.price}</strong>
                 </p>
-                      <a
-                        href={`https://www.facebook.com/messages/t/100063791350743?message=${encodeURIComponent(
-                          `Hi! I'm interested in ordering "${item.name}" for ₱${item.price}.`
-                        )}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="order-btn"
-                      >
-                        Order Now
-                      </a>
+                  <a 
+                    href={`https://m.me/100063791350743?ref=${encodeURIComponent(
+                      `Hi! I'm interested in ordering "${item.name}" for ₱${item.price}.`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="order-btn"
+                  >
+                    Order Now
+                  </a>
+
 
               </div>
             ))}
