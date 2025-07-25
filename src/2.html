@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mmasss's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="myStyles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?cs=srgb&dl=pexels-miguel-%C3%A1-padri%C3%B1%C3%A1n-255379.jpg&fm=jpg') center/cover no-repeat;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: rgba(51, 51, 51, 0.3);
+            position: fixed;
+            width: 100%;
+            backdrop-filter: blur(5px);
+            font-size: 17px;
+            transition: 0.3s;
+            border: none;
+
+        }
+
+        .topnav a {
+            float: right;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px;
+            margin-top: 13px;
+            margin-right: 10px;
+            text-decoration: none;
+            text-align: center;
+
+
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+            font-weight: bold;
+        }
+
+        #logo {
+            float: left;
+            padding: 14px;
+            margin-left: 45px;
+        }
+
+        #myBanner {
+
+            margin: 100px 0px 0px 450px;
+            height: 150px;
+
+        }
+
+
+        #obj {
+            justify-content: center;
+            font-size: 25px;
+            margin-top: 75px;
+        }
+
+        #Profile-img {
+            height: 300px;
+            width: 300px;
+            margin-bottom: 25px;
+            transform: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        #moreinfo {
+            text-decoration: none;
+        }
+
+
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .responsive-div,
+        .single-column-div {
+            box-sizing: border-box;
+            width: calc(50% - 20px);
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: rgba(149, 149, 149, 0.8);
+            border-radius: 8px;
+        }
+
+        .single-column-div {
+            width: calc(100% - 40px);
+        }
+
+        .skill-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skill-item {
+            margin-bottom: 20px;
+        }
+
+        .skill-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 10px;
+            background-color: #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #3d5441;
+            border-radius: 10px;
+            transition: width 0.5s ease-in-out;
+        }
+
+        #myBtnScroll {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: rosybrown;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+            margin-right: 7px;
+        }
+
+        #myBtnScroll:hover {
+            background-color: #555;
+        }
+
+        .about-me-btn {
+            margin-top: 10px;
+            margin-left: 50px;
+        }
+
+        .btn {
+            margin-right: 15px;
+            background: rosybrown;
+            border: none;
+            color: white;
+            padding: 16px 15px;
+            cursor: pointer;
+            font-size: 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+            text-align: center;
+            float: right;
+
+        }
+
+        .btn:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .btn a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .btn:visited {
+            color: inherit;
+        }
+
+
+
+        .sendMsg {
+            background: rosybrown;
+            border: none;
+            color: white;
+            padding: 16px 15px;
+            cursor: pointer;
+            font-size: 15px;
+            border-radius: 4px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .sendMsg:hover {
+            background-color: #555;
+        }
+
+        #banner {
+            margin: 100px auto;
+            display: block;
+            width: 50%;
+        }
+
+        hr.redline {
+            border-top: 1px solid red;
+            margin: 20px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input,
+        form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+
+            margin: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(2);
+            /* Zoom in on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <img id="logo" src="https://drive.google.com/thumbnail?id=1ZCIe_UnmVtrkVKf1qkOLdh7QQdKnwQWi" alt="logo"
+            width="50px">
+        <header>
+            <nav>
+                <a href="#section-contact">Contact</a>
+                <a href="#section-interests">Interests</a>
+                <a href="#section-portfolio">Portfolio</a>
+                <a href="#section-resume">Resume</a>
+                <a href="#section-about">Home</a>
+            </nav>
+    </div>
+    </header>
+    <img id="myBanner" src="myBanner1.gif" alt="Banner" id="banner" />
+
+    <section id="section-about">
+        <div class="container">
+            <div class="responsive-div">
+                <h1>CHARMAGNE MANIAGO</h1>
+                <p id="obj">Seeking an aspiring any development-related position to enhance my technical soft skills
+                    while contributing to an organization’s business development in a reputable organization that
+                    recognize individual’s technical creativeness. Charmagne aims to leverage her technical creativity
+                    and fully further her dedication in providing effective solutions for business needs. Plus
+                    willingness to undergo training.</p>
+            </div>
+
+            <div class="responsive-div">
+                <img id="Profile-img" src="https://drive.google.com/thumbnail?id=1TWNhX6KkgFrclIiJ6-dsU12Z39j0Ji0j"
+                    alt="Profile Image">
+                <p>Charmagne is a BSIT Web Developer (Bachelor of Science in Information Technology major in Web
+                    Development) graduate at Holy Angel University </p>
+                <div class="about-me-btn">
+                    <a href="https://www.linkedin.com/in/charmagne-dale-maniago-099a7b206/" alt="Linkdin">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScrE5XmI-QyeeToHYfmJ67mAu6DNGN21V-kzMwCaosaQ&s"
+                            alt="LinkedIn" height="30px" width="30px">
+                    </a>
+                    <a href="https://github.com/MmasssXklr">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                            alt="GitHub" height="30px" width="30px">
+                    </a>
+                    <button class="btn"><a
+                            href="https://drive.google.com/file/d/1oPstwGqaCvHyD5pSyVRQByUozyQJ7-gM/view?usp=drive_link">See
+                            Resume</a></button>
+
+
+                    <button class="btn"><a href="ongoing.com">See Cover Letter</a></button>
+                </div>
+                <a id="moreinfo" href="#section-interests"><strong>More Info..</a></strong>
+            </div>
+        </div>
+
+        <div class="single-column-div">
+            <h1>Skills</h1>
+            <ul class="skill-list">
+                <li class="skill-item">
+                    <div class="skill-label">Computer Literate</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 100%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-label">Web Development</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 90%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-label">Python</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-label">Java</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 88%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-label">C#</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 75%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-label">Project Management</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-label">Spreadsheet Gsheet</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-label">Linux</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 30%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-label">Blockchain (Solidity)</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 60%;"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <hr class="redline">
+
+    <section id="section-resume">
+        <div class="single-column-div">
+            <h2>Section</h2>
+            <p>This is developing portfolio please bear with me kindly refresh once in a while. Thanks</p>
+        </div>
+    </section>
+
+    <section id="section-portfolio">
+        <div class="single-column-div">
+            <center>
+                <h1>Charmagne's Portfolio</h1>
+            </center>
+
+            <h2>Campaign Report System</h2>
+            <p>The Campaign Report System operates as a sophisticated game data management tool seamlessly integrated
+                into a Google Spreadsheet. With just a few simple interactions, it efficiently extracts and summarize
+                the information from the game's historical data. This facilitates the generation of comprehensive
+                in-game statistics for the players in a team, providing a valuable resource for strategic analysis and
+                performance evaluation..</p>
+            <iframe
+                src="https://docs.google.com/spreadsheets/d/1dKAbpmf9LKUSwMyUNxbj3PEG7s1MFtSv_NCaf_c5kHo/edit?usp=sharing"
+                width="450" height="300"></iframe>
+            <p>Click here for More Info... <a
+                    href="https://drive.google.com/drive/folders/1wEmZ9JVsLo6IFKvfwDR4WaIgvc5CFrMF?usp=drive_link">
+                    ClickMe </a></p>
+            <hr>
+            <h2>Vonshon Ordering System</h2>
+            <p>An Ordering System that directs costumers order straight to paying all at their fingertips.
+                Browse menus, place orders seamlessly, and savor a diverse range of cuisines...</p>
+            <p>Vonshon is a group prelim project where Maniago is the Project Manager. Together with Serrano (Web
+                Developer), Quiambao (Designer), Malong (Designer), and Estanislao (Web Developer)..</p>
+            <iframe src="https://vonshon.bitbucket.io" width="450" height="300"></iframe>
+            <p>Click here for More Info... <a href="https://vonshon.bitbucket.io"> ClickMe </a></p>
+            <hr>
+            <h2>Forever Dream | RPG </h2>
+            <p>A Role Playing Game that is in-progress game. Maniago is co-game Designing with her game developer
+                friend.</p>
+
+            <iframe src="https://rpgplayground.com" width="450" height="300"></iframe>
+            <p>Click here for More Info... <a
+                    href="https://drive.google.com/drive/folders/1CovOfLRwZWa0HFKRmDdDwcgPEYqdWCLq?usp=drive_link">
+                    ClickMe </a></p>
+            <hr>
+            <h2>AC-Coffee | E-Commerce </h2>
+            <p>A group Wordpress project with Castro A., Dacquil K., and Evangelista A. were Maniago focuses on user
+                experience of the website this includes buttons and overall appeal of the website to a user..</p>
+            <iframe src="https://ac-coffee.com" width="450" height="300"></iframe>
+            <p>Click here for More Info... <a href="https://ac-coffee.com"> ClickMe </a></p>
+        </div>
+    </section>
+
+    <section id="section-interests">
+        <div class="single-column-div">
+            <h2>Interests</h2>
+            <p>Content for the Interests section goes here.</p>&nbsp
+            <h2>Certificates</h2>
+
+
+            <table class="certi-table">
+                <tbody>
+                    <tr>
+                        <td><img src="https://drive.google.com/thumbnail?id=16qN8UM0D5_0AFSUK_dM2W6QU7a_tRoiM"
+                                alt="Certificate 1"></td>
+                        <td><img src="https://drive.google.com/thumbnail?id=16wK3817WT-NnfDSqT7_99_WpQgsqPjsk"
+                                alt="Certificate 2"></td>
+                        <td><img src="https://drive.google.com/thumbnail?id=1YEEqIBCJrsi-sa4QPoT5TmMSsITyn8Rt"
+                                alt="Certificate 3"></td>
+                        <td><img src="https://drive.google.com/thumbnail?id=1QvVAXQPmzy56RdGOZBcipF5uB5QNPEN2"
+                                alt="Certificate 4"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://drive.google.com/thumbnail?id=1SBm54Dg4eT7pqMqo-8AR6P1w8_KvzrM0"
+                                alt="Certificate 5"></td>
+                        <td><img src="https://drive.google.com/thumbnail?id=1OBO7ui9WMznVM68a9Fibws9mEnl4Y62T"
+                                alt="Certificate 6"></td>
+                        <td><img src="https://drive.google.com/thumbnail?id=1l-kewTsTI0fyq2-cN7aBJxUyMBOjX0XK"
+                                alt="Certificate 7"></td>
+                        <td><img src="https://drive.google.com/thumbnail?id=1FOlB_UA8dHJM4wKCrD2WqXOa8iSd1jKA"
+                                alt="Certificate 8"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://drive.google.com/thumbnail?id=11v4_kL7HcWAMdBQsBe2nwxVGdqsNN2eE"
+                                alt="Certificate 9"></td>
+                        <td><img src="https://drive.google.com/thumbnail?id=1TO-QYsuJdihA7cD4sVVqBxgL2LHaQez-"
+                                alt="Certificate 10"></td>
+                        <td><img src="https://drive.google.com/thumbnail?id=1D4MfshPVUTiWCB6x6pE7FjM7mqLhGZm2"
+                                alt="Certificate 11"></td>
+                        <td><img src="https://drive.google.com/thumbnail?id=1qTNDK1GLZIceY-GoxIE-HZhJ_V7UNrPC"
+                                alt="Certificate 12"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://drive.google.com/thumbnail?id=1EGISsZr-h81IQOvhiEswPh9EntnvtnF_"
+                                alt="Certificate 13"></td>
+                        <td><img src="https://drive.google.com/thumbnail?id=1fV51cE2B9e5rE5kAtOuWqsAGRhGoJ0Xi"
+                                alt="Certificate 14"></td>
+                        <td><img src="https://drive.google.com/thumbnail?id=10AVslmDInt6NenrtjKsUfiA2lNMUDfc6"
+                                alt="Certificate 15"></td>
+                        <td><img src="https://drive.google.com/thumbnail?id=1a9AW-ZXEFN25CK0aFhErgE36BvW3Jv8Z"
+                                alt="Certificate 16"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://drive.google.com/thumbnail?id=1Rc_k1_wUPSlFqNgSoVYibr7bQA8eVS7B"
+                                alt="Certificate 17"></td>
+                        <td><img src="https://drive.google.com/thumbnail?id=12jqd9TCrZw_Ei1lBaQo4we31biAUmfBW"
+                                alt="Certificate 18"></td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+
+    <section id="section-contact">
+        <div class="single-column-div">
+            <h2>Contact Her</h2>
+            <form id="contactForm">
+                <input name="Email" type="email" placeholder="Your Email" required>
+                <input name="Name" type="text" placeholder="Message" required>
+                <button type="submit" class="sendMsg">Send Message</button>
+            </form>
+            <div id="formMessage"></div>
+
+
+        </div>
+    </section>
+
+    <div class="single-column-div">
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section about">
+
+                </div>
+
+
+            </div>
+            <div class="footer-bottom">
+                <center>
+
+                    &copy; 2024 Your Mmasss's Portfolio | Designed by Charmagne Maniago</center>
+            </div>
+        </footer>
+    </div>
+
+
+    <button onclick="topFunction()" id="myBtnScroll" title="Go to top">Top</button>
+
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtnScroll").style.display = "block";
+            } else {
+                document.getElementById("myBtnScroll").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+
+
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            fetch('https://script.google.com/macros/s/AKfycbwG5EOV065-kMUYirKVySCxyjZs1WMYpLLlbcPuwaAXodUmx25EbYNwm--a4NL9H_wu/exec', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.result === 'success') {
+                        document.getElementById('formMessage').textContent = 'Message sent successfully!';
+                        form.reset(); // Optional: Clear the form fields
+                    } else {
+                        document.getElementById('formMessage').textContent =
+                            'There was an error sending your message. Please try again.';
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('formMessage').textContent =
+                        'There was an error sending your message. Please try again.';
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+
+    <!--//https://drive.google.com/file/d/163lzPy2ZCX4EEAZambbQPY4ZcoYzGO3m/view?usp=drive_link" cover letter-->
+</body>
+
+</html>

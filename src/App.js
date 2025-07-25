@@ -225,8 +225,6 @@ function App() {
                   >
                     Order Now
                   </a>
-
-
               </div>
             ))}
           </div>
@@ -255,21 +253,21 @@ function App() {
               href="https://web.facebook.com/profile.php?id=100063791350743"
               aria-label="Instagram"
             >
-              <FaInstagram size={24} />{" "}
+              <FaInstagram size={24} />
             </a>
 
             <a
               href="https://web.facebook.com/profile.php?id=100063791350743"
               aria-label="Facebook"
             >
-              <FaFacebook size={24} />{" "}
+              <FaFacebook size={24} />
             </a>
 
             <a
               href="https://web.facebook.com/profile.php?id=100063791350743"
               aria-label="Tiktok"
             >
-              <FaTiktok size={24} />{" "}
+              <FaTiktok size={24} />
             </a>
           </div>
         </section>
